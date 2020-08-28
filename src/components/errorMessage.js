@@ -8,7 +8,7 @@ const ErrorMessage = ({error = '',occurred}) => {
         }
         return(
             <React.Fragment>
-                <p>{errorMessage}</p>
+                <p className={'text-danger'}>{errorMessage}</p>
             </React.Fragment>
         )
     }

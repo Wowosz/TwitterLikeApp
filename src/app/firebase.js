@@ -1,15 +1,18 @@
-import * as firebase from 'firebase'
-import 'firebase/auth'
+import * as firebase from 'firebase/app'
+import 'firebase/firestore'
 
 const config = {
-    apiKey: process.env.REACT_APP_FIREBASE_KEY,
-    authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
-    databaseURL: process.env.REACT_APP_FIREBASE_DATABASE,
-    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID
+    apiKey: "AIzaSyApj_GPa76JUAAsa9K2IJXMizuXzjPO58s",
+    authDomain: "social-9412c.firebaseapp.com",
+    databaseURL: "https://social-9412c.firebaseio.com",
+    projectId: "social-9412c",
+    storageBucket: "social-9412c.appspot.com",
+    messagingSenderId: "261462853560",
+    appId: "1:261462853560:web:6f4f13deac402bfa1cb14d",
+    measurementId: "G-NJYTBG13FZ"
 }
 
 const fire = firebase.initializeApp(config)
+export const db = fire.firestore()
 
 export default fire
